@@ -1,13 +1,10 @@
 {
-    "virtual_machine": [
-      {
-        "name": "TEST-VM-001",
-        "subnet": "SNET-DAASVDI-TEST-NE-001"
-      },
-      {
-        "name": "TEST-VM-002",
-        "subnet": "SNET-DAASVDI-TEST-NE-002"
-      }
-    ]
+    "Service-Catalog-VM-001": {
+        "name": "Service-Catalog-VM-001",
+        "subnet": "Service-Catalog-SN-001"
+    },
+    "Service-Catalog-VM-003": {
+        "name": "Service-Catalog-VM-002",
+        "subnet": "Service-Catalog-SN-002"
+    }
 }
-

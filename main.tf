@@ -8,19 +8,14 @@ locals {
 }
 
 
-output "inventory" {
-  value = local.inventory
-}
-
-
 module "azurerm_virtual_machine" {
-  for_each     = { for idx, v in local.inventory.virtual_machine : v.name => v }
+  for_each     = { for idx, v in local.inventory : v.name => v }
   source       = "./modules/azurerm_virtual_machine/"
   vm_name      = each.value.name
-  rg           = "RG-DAASVDI-SB-DAASVDI-TEST-NE-001"
+  rg           = "Service-Catalog-RG"
   vdi_user     = "adminuser"
   vdi_password = "AzureRulz00!"
-  vnet         = "VNET-DAASVDI-SB-DAASVDI-TEST-NE-001"
+  vnet         = "Service-Catalog-VNET"
   subnet       = each.value.subnet
 }
 

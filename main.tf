@@ -14,7 +14,7 @@ output "inventory" {
 
 
 module "azurerm_virtual_machine" {
-  for_each     = { for idx, v in local.inventory.virtual_machine : idx => v }
+  for_each     = { for idx, v in local.inventory.virtual_machine : v.name => v }
   source       = "./modules/azurerm_virtual_machine/"
   vm_name      = each.value.name
   rg           = "RG-DAASVDI-SB-DAASVDI-TEST-NE-001"

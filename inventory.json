@@ -3,7 +3,7 @@
         "name": "Service-Catalog-VM-001",
         "subnet": "Service-Catalog-SN-001"
     },
-    "Service-Catalog-VM-003": {
+    "Service-Catalog-VM-002": {
         "name": "Service-Catalog-VM-002",
         "subnet": "Service-Catalog-SN-002"
     }
